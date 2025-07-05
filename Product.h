@@ -1,5 +1,9 @@
 #pragma once
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <utility>
+
 
 using namespace std;
 
@@ -15,7 +19,7 @@ public:
 	int getQuantity();
 	bool decreseQuantity(int val);
 	
-	virtual bool isExpired();
-	virtual bool isShippable();
-	virtual double getWeight();
+	virtual bool isExpired() const { return false; };
+	virtual bool isShippable() const { return false; };
+	virtual double getWeight() const { return 0.0; }
 };
